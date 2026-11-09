@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>12 Week Year 2026</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f5f1;--card:#fff;--tx:#1a1a1a;--mu:#6b6b6b;--ac:#0f6e4f;--bd:#e3e1da;--lo:#c0503f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121412;--card:#1c1f1c;--tx:#eee;--mu:#9a9a9a;--ac:#3ecf9a;--bd:#2c302c;--lo:#e0786a}}
+:root[data-theme="dark"]{--bg:#121412;--card:#1c1f1c;--tx:#eee;--mu:#9a9a9a;--ac:#3ecf9a;--bd:#2c302c;--lo:#e0786a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0 0 2px}.s1{color:var(--mu);font-size:13px;margin:0 0 12px}
+.tabs,.tg{display:flex;gap:8px;margin-bottom:10px}
+.tabs button,.tg button{flex:1;padding:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font-size:15px}
+.tg button{background:var(--bg);border-radius:8px}
+.tabs button.on,.tg button.on,.sc button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--mu);margin:0 0 6px}
+h2.sub{margin-top:12px}h3{font-size:15px;margin:0 0 8px}
+.h{color:var(--mu);font-size:12px;margin:2px 0 6px}
+.rw{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bd)}
+.rw label{flex:1;display:flex;gap:10px;align-items:center;padding:8px 0}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--ac);flex:none}
+textarea,input[type=date],input[type=number]{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:8px;font:16px/1.5 inherit;width:100%;box-sizing:border-box}
+textarea{resize:vertical;margin-top:4px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.row small{display:block;color:var(--mu);font-size:12px}
+.sc{display:flex;gap:6px}
+.sc button{flex:1;height:36px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px;font-size:14px}
+.pct{font-size:28px;font-weight:700;color:var(--ac)}
+.bar{height:8px;background:var(--bd);border-radius:4px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--ac)}
+.ibtn{cursor:pointer;color:var(--ac);font-weight:700;font-size:13px;border:1px solid var(--ac);background:none;border-radius:50%;width:22px;height:22px;padding:0;margin-left:6px;flex:none}
+.ibx{margin:6px 0;padding:10px;background:var(--bg);border:1px solid var(--bd);border-radius:8px;font-size:14px;white-space:pre-line}
+.ibx[hidden]{display:none}
+.chart{display:flex;gap:6px;align-items:flex-end;height:110px;margin-top:10px}
+.chart div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.chart i{display:block;width:100%;background:var(--ac);border-radius:4px 4px 0 0;min-height:2px}
+.chart b{font-size:11px;color:var(--mu);margin-top:4px}.chart em{font-style:normal;font-size:10px;color:var(--mu)}
+.series{display:flex;gap:6px;align-items:center;margin-top:8px}.series i{width:22px;height:22px;border-radius:50%;background:var(--bd)}
+.series i.w{background:var(--ac)}.series i.l{background:var(--lo)}.series b{margin-left:8px}
+.bw{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-top:6px}.g{color:var(--ac)}.r{color:var(--lo)}
+details.rev summary{cursor:pointer;font-weight:700;padding:10px 0}
+.hist{display:flex;flex-direction:column;gap:6px}.hist button{text-align:left;padding:8px 10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px}
+.ov{position:fixed;inset:0;background:var(--bg);z-index:10;overflow:auto;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}.ov[hidden]{display:none}.vz{max-width:640px;margin:0 auto;padding:16px}
+.row2{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:6px 0}
+.sk{font-style:normal;color:var(--ac);font-size:12px;margin-left:6px;border:1px solid var(--ac);border-radius:10px;padding:0 6px;white-space:nowrap}
+</style></head><body><main>
+<h1>12 Week Year 2026</h1><div class="s1" id="ws"></div>
+<div class="card" id="stkc"></div><div class="tabs"><button id="t1" class="on">Tag</button><button id="t2">Woche</button></div>
+<div id="v"></div></main><div id="ov" class="ov" hidden></div>
+<script>
+var K="w12v2",S={days:{},weeks:{}};try{var q=localStorage.getItem(K);if(q)S=JSON.parse(q)}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function iso(d){return new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)}
+function add(s,n){var d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return iso(d)}
+function mon(s){return add(s,-((new Date(s+"T12:00:00").getDay()+6)%7))}
+function dayo(k){var o=S.days[k]||(S.days[k]={});o.c=o.c||{};o.n=o.n||{};return o}
+function weeko(k){var o=S.weeks[k]||(S.weeks[k]={});o.c=o.c||{};o.n=o.n||{};return o}
+var START="2026-09-28";
+function dsince(){return Math.floor((new Date()-new Date(START+"T00:00:00"))/864e5)}
+function wnum(w){return Math.floor((new Date(w+"T12:00:00")-new Date(START+"T12:00:00"))/6048e5)+1}
+function cw(){return Math.max(1,Math.min(13,Math.floor(dsince()/7)+1))}
+function lim(){var w=cw();return w<=4?{s:5.5,i:60}:w<=8?{s:4.5,i:45}:{s:4,i:30}}
+function lw(){var r=[];Object.keys(S.days).sort().reverse().forEach(function(k){var n=S.days[k].n||{};["q1","sr"].forEach(function(x){(n[x]||"").split("\n").forEach(function(l){l=l.replace(/^\s*\+\s*/,"").replace(/^Szene:\s*/,"").trim();if(l&&r.length<3)r.push("\u2022 "+l)})})});return r.length?r.join("\n"):"Noch keine Wins notiert."}
+function gl(k){var r="";Object.keys(S.weeks).sort().reverse().forEach(function(w){var v=(S.weeks[w].n||{})[k];if(!r&&v&&v.replace(/[\s+\d.:\-]/g,"").length>2)r=v});return r||"Noch nicht geschrieben (Woche-Tab, Wochen-Rituale)."}
+
+var SC=["Arbon, offen\n\u2022 Wer steht wo: Nick hat den Ball, ich stehe offen.\n\u2022 Space: vor mir, der Gegner kommt von links.\n\u2022 Entscheidung: schön aufdrehen, voller Sprint. Kann ich nicht direkt mitnehmen: De-Jong-Turn.\nDetail: Wie ich den Fuss zurückziehe und der Ball voll in den Lauf geht.","Abtwil, vor der IV\n\u2022 Wer steht wo: Alban spielt zu Lionel, ich bin zwischen den beiden Zentrumspielern. Lionel schaut mich nicht an.\n\u2022 Space: Full Surrounding Scan: Was passiert hinter meiner Schulter? Critical Scan.\n\u2022 Entscheidung: Lionel spielt mir den Ball auf den linken Fuss. Direkt smooth mitnehmen, Go, den Space attackieren.","Arbon (Nikola), Halbfeld\n\u2022 Wer steht wo: Nikola rechts am Ball, ich zwischen Sechser und IV, der IV kommt hinter mir.\n\u2022 Space: Der Touch muss weg vom Verteidiger.\n\u2022 Entscheidung: Ball halb rechts auf den rechten Fuss. Hazard, Stop, Go: Innenseite annehmen, aussen weg, Go.\nDetail: Nach dem Outside-Kontakt Fuss rausstellen (extra Step outside).","Uzwil, Pietro RV\n\u2022 Wer steht wo: Alban, Pietro, er hält den Ball und spielt zu mir. Ich stehe zur Grundlinie, Gegner im Rücken.\n\u2022 Space: Schulterblick, freier Raum Richtung Tor.\n\u2022 Entscheidung: Linke Annahme, mit rechts sofort in den Raum mitnehmen, Tempo Richtung Tor.\nDetail: Adi und Pietro rufen und coachen. Ich strecke nach dem Kontakt mit rechts den Arm in den Raum.","Abziel, links aussen (Rabil)\n\u2022 Wer steht wo: Rabil hat den Ball und spielt ihn zurück auf meinen linken Fuss. Rechts von mir ist der Gegner. Ich bin am Rand der Box.\n\u2022 Space: Mitte, seitlich von mir.\n\u2022 Entscheidung: First Touch, Safe Turn wie Bellingham, Touch Richtung Mitte, sofort Schuss.","Abtwil, Silvano, hoher Ball\n\u2022 Wer steht wo: Alban hat den Ball, ich werde gedeckt. Fake-Go, ich komme entgegen. Der Ball geht weit, ich drehe mich um und spekuliere auf den zweiten Ball.\n\u2022 Space: Silvano hat ihn und legt ihn mir ab. Links höre ich Adi schreien, ich sehe Platz nach vorne.\n\u2022 Entscheidung: Ich gehe durch: erster Touch, Vollmitnahme, Space attackieren. Der erste IV kommt: Roll, doppelter Übersteiger rechts, weiterlaufen, schon von weit schiessen.","Abtwil, erste Szene, Kevin-De-Bruyne-Run\n\u2022 Wer steht wo: Ich laufe als 10er in den Halbraum zwischen Aussenverteidiger und Innenverteidiger. Der Ball kommt flach und steil vom Flügel.\n\u2022 Space: Ich scanne vor der Annahme.\n\u2022 Entscheidung: Ein Touch, Schuss voll unter die Ecke."];
+var M=["Mut 1, Szene 1 (Uzwil): Rabil spielt mir den Ball in die Tiefe. Ich attackiere das Tor, höre die Rufe, bin egoistisch, Roll Drag rechts vorbei, schiesse selber.\nDetail: Ruf von Yannick, das Gefühl vom Innenkontakt (Innenseite), bevor ich den Gegner face.","Mut 1, Szene 2 (Amriswil): Links, ich nehme den Ball mit der Innenseite nach vorne und laufe den Gegner frontal an. Übersteiger rechts, links vorbei, Arme raus, Kopf hoch, Schuss mit links nach rechts unten. Ich sehe nur mich und das Tor.","Mut 2: Nick spielt mir den Ball, ich laufe in die Tiefe und scanne beim Run. Ich nehme mutig mit, sehe genau, wohin ich schiessen will, hebe einmal den Kopf und ziehe voll ab, mit Überzeugung.\nDetail: Nicks Ruf \u201eLos!\u201c und der erste Kontakt, der den Ball in den Lauf legt.","Mut 3, Szene 1: Ich bekomme den Ball im Zentrum, Körpertäuschung wie gegen Au, im Zentrum vorbei mit Tempo.","Mut 3, Szene 2: Ich bekomme den Ball von Yannick halbrechts im Zentrum (wie gegen Arbon). Packing, Fake-Flanke, ich lege mir den Ball vor und schiesse aus ca. 30 m (Position wie in Amriswil).\nDetail: Kopf hoch zum Tor, linke Ecke, das Gefühl, wie der Ball meinen vorderen rechten Zeh verlässt.","Reset 1: Ich habe den Ball gerade verloren, der Gegner schiesst daneben. Ich sage neutral, was passiert ist, ohne Wertung. Reset-Protokoll: ausatmen, lächeln, Fuck it. Keine Gestik, ich ignoriere Adis Rufe und hole mir den Ball in der nächsten Aktion. Bellingham-Turn nach dem Ball vom IV, Packing.\nDetail: Adis Stimme im Hintergrund, mein ruhiger Atem, der Blick zur nächsten Aktion.","Reset 2: Ich gehe von aussen ins Zentrum, Doppelstepover, verliere den Ball knapp. Reset-Protokoll. Ich bekomme den Ball gleich wieder, gehe an den zweien vorbei an der Linie, Elastico wie gegen Amriswil. Der dritte Gegner kommt: statt Pass zu Silvano mit Tempo weitergehen.\nDetail: Das Gefühl des Elastico am Aussenrist, Silvanos Ruf, den ich ignoriere."];
+var TIPS="Realismus-Check, 10 Punkte:\n1. Bewegung vorher real durchgehen (Körpertäuschung, Turn)\n2. 20 Sek Video der Szene als Detail-Quelle\n3. Alle Sinne: sehen, hören, spüren, Rasen, Temperatur\n4. Aufrecht sitzen, Füsse flach, wenn möglich Schuhe an\n5. Spieltempo, Zeitlupe nur für neue Bewegungen\n6. Lieber eine scharfe Szene als fünf unscharfe\n7. Pro Woche ein Detail austauschen\n8. Neu: Gleiche Zeit und gleicher Ort jeden Abend (Anker)\n9. Neu: Erst das Körpergefühl, dann das Bild\n10. Neu: Stimme leise mitsprechen (Lippen bewegen)";
+var PW="Sirnach: Hacken-Bewegung, locker. Schuss rechts oben. Pepe kommentiert mit der Lockerheit. Handshake mit dem Zuschauer nach dem Spiel.\n\nHorgen: Ich schaue hoch, rechts oben. Der Ball verlässt den vorderen rechten Zeh, locker und scharf. Tor, Schreie der Zuschauer. Touli nimmt mich zu sich. Nach dem Spiel meine Eltern und die Fanta. Kommentar im nächsten Training.\n\nBrugg: Durchlauf zum ersten Tor, 60-Meter-Run. Dodes Kommentar. Simon wegschicken, Freistoss schiessen. Mama draussen jubelt, ihr Kommentar.\n\nHSG: Tunnel, Elastico. Draussen \u201ewow\u201c. Sonderdeckung des anderen Spielers. \u201eDu bist zu gut ...\u201c\n\nKZU: Scognamiglios Reaktion, sein Blick. Andere Mitspieler genervt, Jay, weil ich den Glanz habe. Reaktion auf der Matura-Party.\n\nPro Win ein Detail mehr: wer, gesehen, gehört, Körper, Handlung, danach.";
+var FEEL="Körper: locker.\nArroganz: das dreckige Lächeln, Fuck-you-Mentality, ich bin besser.\nFucking-Man-Feeling: ich weiss es, ich brauche keine Bestätigung, ihr müsst es mir nicht sagen, dazu das leichte Nicken.\nGleichgültigkeit: ich weiss, wer ich bin, ich habe alles erreicht, ich spiele für den Spass.\n\n(Dieser Block wird noch verfeinert.)";
+var DEF="Ich stehe mit 80 Kilo, 8 Prozent Körperfett vor dem Spiegel. Meine Brust ist prall, meine Abs sind sichtbar. Ich bin explosiv und stark.\nIch bin der Fucking Man. Ich fordere und will jeden Ball. Ich gehe ins Dribbling, ich suche den Abschluss. Scheitern gehört dazu. Ich bin der, der das Spiel entscheidet.\nIch bin diszipliniert, routiniert und Locked In.";
+function lastN(k,d){var r="";Object.keys(S.days).sort().reverse().forEach(function(x){var v=(S.days[x].n||{})[k];if(!r&&v&&x!=cur)r=v});return r||d}
+function stkInfo(){var ks=Object.keys(S.days).sort(),run=0,prev=null,best=0,at={},last=null;ks.forEach(function(k){var y=(S.days[k].n||{}).st=="ja";if(y){run=(prev&&add(prev,1)==k)?run+1:1;at[k]=run;if(run>best)best=run;last=k;prev=k}else{run=0;prev=null}});var t=iso(new Date());return{c:(last&&last>=add(t,-1))?at[last]:0,b:best}}
+function renderStk(){var i=stkInfo();document.getElementById("stkc").innerHTML='<h2>Streak</h2><div class="pct">Tag '+i.c+' von 28</div><div class="bar"><i style="width:'+Math.min(100,100*i.c/28)+'%"></i></div><div class="h">Bestwert: '+i.b+'. Am Abend entscheidest du, ob du den Tag übernimmst.</div>'}
+
+var ANK="Pro Szene: Wer steht wo? Space? Entscheidung? Lies die Szene und visualisiere sie selber. Annahme ist Antritt (Touch / Go).";
+var BH="Touch / Go (Bounce Hit): Im Kopf sagen, nicht laut. Touch = Annahme, Go = Antritt. Im Training darfst du es leise murmeln.";
+
+var MG=["auf","hm","stk","tz"],PH=["tr","slp","kre","sko","es","bew"],MD=["dd","ank","ng","sm","ai"],AB=["tp","mob","fi","vs","tzr","jr","bet","bib"],FB=["fq","f3","fsc","zl"];
+var PL={tr:"Training",slp:"Schlaf",kre:"Kreatin",sko:"Schwarzkümmelöl",es:"Kauen+Squats",bew:"Meals mit Intention"};
+var R=[["r_tgt","TARGET umgesetzt"],["r_scan","SCAN: vor dem Ball gesehen"],["r_mut","MUT: sinnvolle Aktion gewagt"],["r_att","ATTACK: Raum und Gegner angegriffen"],["r_res","RESET: nach Aktionen sofort wieder da"],["r_ants","Gedanken (Vergleich, Angst) erkannt und weitergemacht"],["r_obs","Sachlich beobachtet statt bewertet"],["r_fan","Biggest Fan Voice gehört"]];
+var CUE="Vor dem Spiel in Ruhe lesen (30 Sek):\nPositionskette: Position, Scan, Space, Attack. Ich positioniere mich aktiv: Wo kommt der Ball als Nächstes?\nSCAN: Ich sehe, bevor der Ball kommt.\nMUT: Ich wage die Aktion, wenn sie da ist.\nATTACK: Raum und Gegner angreifen.\nRESET: Nach jeder Aktion sofort wieder da.\nZonen: Vorne Ballverlust okay. Mitte nach dem Scan. Hinten sauber annehmen.\n\nFehler oder negativer Gedanke, immer derselbe Ablauf:\n1. Ausatmen und benennen (\u201eVergleich\u201c, \u201eAngst\u201c)\n2. Lächeln\n3. \u201eFuck it\u201c, nächste Aktion\nTeam-Anker: Ich nehme Verantwortung.\n\nIm Spiel zählen nur zwei Wörter:\nSEHEN: den Gegner beobachten (schwacher Fuss, Abstand, Blick), sachlich, ohne gut oder schlecht. Weg von mir selbst, hin zum Gegner.\nWEITER: Reset.\nDazu dein Mikro-Fokus aus dem Target.";
+var TGT="Das Target ist EIN Verhalten, das du heute bewusst übst.\n\nHeute entscheide ich: Zuversicht ist eine Entscheidung, kein Gefühl (Rotella). Z.B. \u201eHeute zeige ich, dass ich den Ball verlange.\u201c\nBehaviour: Was tue ich? Z.B. \u201eIch greife an, wenn ich Raum habe.\u201c\nTrigger: Wann? Z.B. \u201eIch bekomme den Ball mit Raum vor mir.\u201c\nResponse: Was dann? Z.B. \u201eAnnahme ist Antritt, sofort auf den Gegner.\u201c\nMikro-Fokus: Worauf achte ich? Z.B. \u201eSchulterblick vor der Annahme.\u201c\n\nEin Wenn-dann ist entschieden, bevor die Angst mitredet. Nachher prüfst du nur: getan, ja oder nein?";
+var OPF="Ein Opfersatz sagt, dass etwas ausserhalb von dir entscheidet, was du tust. Schreib einen, der dir heute begegnet ist, in \u201eIch werde\u201c um.\n\n\u2022 \u201eDer Trainer nimmt mich eh raus, darum spiele ich safe.\u201c wird zu \u201eIch nutze die nächste Chance.\u201c\n\u2022 \u201eAlban ist besser.\u201c wird zu \u201eIch nehme eine Sache von ihm mit und spiele meine nächste Aktion.\u201c\n\u2022 \u201eWenn ich den Ball verliere, halten mich alle für schlecht.\u201c wird zu \u201eIch kann den Ball verlieren und bleibe aktiv.\u201c\n\u2022 \u201eMeine Mitspieler passen mir nie.\u201c wird zu \u201eIch fordere laut und gehe in die Lücke.\u201c\n\u2022 \u201eIch bin zu müde zum Visualisieren.\u201c wird zu \u201eIch mache heute die 2-Minuten-Version.\u201c";
+var AV="Im Stehen, Licht an, direkt nach dem Zähneputzen, früh im Abend, nicht im Bett. Zu müde? Sprich die Szenen einmal als Sprachmemo auf und hör sie. Minimal: 2 Min, 1 Szene.\n\nAblauf (5 Min):\n1. 4 ruhige Atemzüge, Augen zu\n2. Szene A (90 Sek), Szene B (90 Sek, an 2 Abenden pro Woche die Fehler-Version)\n3. Past Win mit Körpergefühl (60 Sek)\n4. Beweis-Satz einmal\n\nSo wird es realer:\n\u2022 Szene vor Satz: Handlung durchspielen, dann die Bedeutung\n\u2022 Ich-Perspektive, Spieltempo (Zeitlupe nur für neue Bewegungen)\n\u2022 Körper dabei: Kopf drehen, Gewicht auf den gegnerfernen Fuss. Neue Moves erst real üben\n\u2022 Konkrete Orte, Geräusche, Rasen\n\u2022 Mit 10 Sek Druck starten, offener Ausgang: klappt, oder Ball weg, dann ausatmen, lächeln, Fuck it, nächste Aktion\n\u2022 Emotion folgt den Details, sie darf kommen, ist aber nicht Bedingung\n\nDeine Szenen (Scanning alle 2-3 Tage hier, sonst vor dem Training):\n"+SC.join("\n")+"\n\n"+ANK;
+var FS="Fehler plus ruhige Reaktion, 2x pro Woche statt der positiven Szene B. Auslöser, die du übst:\n\u2022 Alban macht eine starke Aktion\n\u2022 Der Trainer schaut kritisch\n\u2022 Ich verliere den Ball\n\u2022 Ich sitze auf der Bank\nAblauf: Gedanke benennen, ausatmen, lächeln, Fuck it, nächste Aktion. Eine Sache von Alban mitnehmen.";
+
+var UI={},VZ=null,VT=null;
+var WHY="Warum: Du übst Entscheidung und Gefühl vorher, damit sie im Spiel vertraut sind und deine Identität echte Szenen als Beweis bekommt. Ersetzt kein Training.\nWie: Ich-Perspektive, Spieltempo, Körper dabei, echter Ort, Gefühl in Brust, Hände, Beine, 10 Sek Druck, offener Ausgang. Der Start-Knopf führt dich durch.\nMüde? Im Stehen, Licht an, direkt nach dem Zähneputzen. 2-Min-Version oder Sprachmemo.";
+function fmt(s){return Math.floor(s/60)+":"+("0"+s%60).slice(-2)}
+var RULES="SHOW THEM: Ich will den Ball, ich will zeigen, dass ich der Beste bin. Ich biete mich an und übernehme Verantwortung.\nSCAN: Ich weiss vor dem Ball, was ich tue (Touch / Go).\nLEICHTIGKEIT: Ich spiele locker und egoistisch: dribbeln, schiessen, dribbeln, schiessen. Fehler? Fuck it.";
+var ST={fb:[
+{n:"Ich bin ein Dribbler mit Flair und Leichtigkeit.",vg:"Bassersdorf: Ich spiele links aussen, Inside-Elastico, ziehe rein und laufe Richtung Tor. Janko ruft mich, ich attackiere den nächsten Gegner. Schnelle, smoothe Bewegung: zack rein, zack raus, mein Oberkörper springt mit, erst nach links, dann nach rechts.\nHSG: Ich bin aussen, ziehe nach innen, will nach rechts hinten raus für den Abschluss. Inside-Elastico durch die Beine, perfekt, zack, bumm, bumm. Ich höre die Schreie \u201eoh mein Gott\u201c, ich schiesse. Nachher sagen die Leute, ich dribble wie Dembélé.",em:"Körper: lockere Hüfte, der Oberkörper geht mit. Das dreckige Lächeln, \u201eich bin besser\u201c, amüsiert, Lust auf das Dribbling.",zk:"Nächstes Training oder Spiel: Ich verlange den Ball, gehe ins 1 gegen 1 und zeige einen Skill. Schwierigkeit: Der Gegner bleibt dran. Ich bleibe locker und mache die nächste Bewegung.",sc:[0,1,3]},
+{n:"Ich bin mutig und egoistisch am Ball.",vg:"4-Tore-Spiel: Ich bekomme den Ball, öffne mich, Fake-Schuss, links oben hoch rein. Pepe kommt zu mir und redet mit mir, Handshake mit den Leuten.\nZweite Halbzeit: Die Leute wollen rufen, ich gehe selber vorbei, am ersten, am zweiten, und ziehe Richtung Tor.",em:"Leichtigkeit, \u201eich bin besser\u201c. Ich höre sie, aber ich will das Tor, ich will auffallen, ich will der Beste sein. Fokus nach vorne, Ruhe.",zk:"Nächstes Spiel: Fake-Schuss und Schuss ohne Nachdenken, auch aus der Distanz. Schwierigkeit: Mitspieler rufen. Ich entscheide selbst und ziehe durch.",sc:[2,4]},
+{n:"Unter Druck bin ich am besten. Fehler? Fuck it, nächste Szene.",vg:"Arbon: Die ersten 15 Minuten laufen schlecht. Ich sage \u201eFuck it\u201c und schiesse zwei Tore: Ball von denen, links unten rein. Danach laufe ich rechts am Torwart vorbei, rein.\nDritte Szene: Ich bin aussen, schlage wunderschöne Flanken, Ball auf Silvano, er köpft ihn rein.",em:"Sicherheit: Ich weiss, was ich kann, ich bin ein Motherfucker, weiter. Körper: Schultern locker, kein Zusammenfallen.",zk:"Nach dem nächsten Fehler: neutral benennen, ausatmen, lächeln, Fuck it, nächste Aktion mit Ball und Tempo. Schwierigkeit: Adi ruft.",sc:[5,6]}],
+al:[
+{n:"Ich bin von Natur aus selbstbewusst.",vg:"Sieben Key-Events: FC Biel (alle haten mich, ich gehe meinen Weg), neue Schule Lindenhof (in der Klasse), im Fussball die Selbstsicherheit, Urlaub mit den Jungs (ich spreche die Leute an), Debattierwettbewerb, jetzt bei der Arbeit.",em:"Selbstverständlichkeit, Ruhe in der Brust, ich gehöre hierhin.",zk:"Heute spreche ich als Erster, in normalem Tempo, ohne lange zu überlegen.",sc:[]},
+{n:"Ich bin nur an meiner Meinung interessiert.",vg:"Der Vater sagt: \u201eAls ich klein war, spiel ab.\u201c Mir scheissegal, ich dribble und schiesse selber. \u201eDu hast nicht bestanden.\u201c \u201eKlar habe ich bestanden.\u201c Ist mir egal. Leute sagen \u201eder und der ist besser\u201c, mir scheissegal, ich ignoriere sie.",em:"Freiheit, innere Stille, wenn die Stimmen von aussen leise werden. Leicht, nicht kalt.",zk:"Im Gym oder im Gespräch sage ich meine Meinung klar, ohne Absicherung. Kommt der Gedanke \u201eWas denken die?\u201c: \u201eMeine Meinung zählt.\u201c",sc:[]},
+{n:"Ich bin der Boss in jedem Raum und strahle es aus.",vg:"Debattierwettbewerb. In meiner Klasse. Jetzt an der HSG: Ich melde mich, stehe vor den anderen, präsentiere, es macht mir nichts aus. Ich bin der Man.",em:"Ruhige Präsenz: breite Schultern, fester Stand, langsamer Atem. Kein Lärm.",zk:"Beim Betreten eines Raums gehe ich ruhig, offene Haltung, Blick nach vorne, Blickkontakt 1 Sekunde länger. Bei einer Absage: Fuck it, locker weiter.",sc:[]}]};
+function wn(o,k,l){var lv=lastN(k,"");return num(o,k,l+(lv?" (zuletzt "+lv+")":"")+((o.n[k]&&lv&&+o.n[k]>+lv)?" \u2191":""),.5)}
+function wtxt(){return "Notiere deine Top-Gewichte: Bench, Klimmzug (+kg), Bizeps Curls, Seitheben. Sie müssen immer hochgehen: jede Woche mehr Gewicht oder mehr Wiederholungen.\n\nZuletzt:\nBench: "+lastN("wb","-")+" kg\nKlimmzug: "+lastN("wk","-")+" kg\nBizeps Curls: "+lastN("wc","-")+" kg\nSeitheben: "+lastN("ws","-")+" kg"}
+function vsteps(m,key){
+if(m=="al"||m=="fb"){var d=new Date(cur+"T12:00:00"),i=Math.floor(d/864e5)%3,L=ST[m],s=L[i],r=[];
+r.push({t:"Vergangenheit",s:60,x:"\u201e"+s.n+"\u201c\n\n"+s.vg+"\n\nIch-Perspektive: Was sehe ich? Was höre ich? Was tue ich?"});
+r.push({t:"Emotion",s:60,x:s.em+"\n\nSteh auf, kleine Körpertäuschung, Gewicht auf den Füssen. 4 Sek ein, 6 Sek aus. Dann den Satz 2-3x langsam sprechen:\n\u201e"+s.n+"\u201c\n\nTipp: Sprich die Erinnerung einmal als Sprachmemo auf."});
+var zx=s.zk;if(m=="fb"&&s.sc.length){zx+="\n\nSzenen:\n"+s.sc.map(function(j){return M[j]}).join("\n\n")}
+r.push({t:"Zukunft",s:60,x:zx});
+L.forEach(function(o,j){if(j!=i)r.push({t:"Einmal laut",s:25,x:"\u201e"+o.n+"\u201c\n\n"+o.em})});return r}
+var r=[{t:"Bounce Hit",s:30,x:BH+"\n\n"+ANK}];
+SC.slice(0,key=="vs"?7:3).forEach(function(s,j){r.push({t:"Szene "+(j+1),s:35,x:s+"\n\nLesen, dann selber visualisieren. Touch / Go im Kopf."})});return r}
+function startViz(m,key){VZ={m:m,key:key,i:0,steps:vsteps(m,key)};VZ.left=VZ.steps[0].s;clearInterval(VT);VT=setInterval(function(){if(VZ&&VZ.left>0){VZ.left--;var e=document.getElementById("vzt");if(e)e.textContent=fmt(VZ.left)}},1000);showViz()}
+function showViz(){var ov=document.getElementById("ov");if(!VZ){ov.hidden=true;ov.innerHTML="";return}ov.hidden=false;var st=VZ.steps[VZ.i];
+if(st)ov.innerHTML='<div class="vz"><div class="h">Schritt '+(VZ.i+1)+' von '+VZ.steps.length+'</div><h3>'+st.t+'</h3><div class="pct" id="vzt">'+fmt(VZ.left)+'</div><div class="ibx" style="display:block;font-size:16px">'+st.x+'</div><div class="tg"><button data-vz="x">Abbrechen</button><button class="on" data-vz="n">Weiter</button></div></div>';
+else if(VZ.m=="sc")ov.innerHTML='<div class="vz"><h3>Konntest du die Szenen sehen und spüren?</h3><div class="sc"><button data-vq="Ja">Ja</button><button data-vq="Teils">Teils</button><button data-vq="Nein">Nein</button></div></div>';
+else{var b="";for(var k=0;k<=10;k++)b+='<button data-vq="'+k+'">'+k+'</button>';ov.innerHTML='<div class="vz"><h3>Intensität des Gefühls, 0-10</h3><div class="sc" style="flex-wrap:wrap">'+b+'</div><div class="h" style="margin-top:10px">Eine 3 ist okay. Du misst, ob die Methode über die Wochen wirkt.</div></div>'}}
+function endViz(q){var o=dayo(cur);o.n["vq_"+VZ.key]=q;o.c[VZ.key]=1;VZ=null;clearInterval(VT);save();showViz();draw()}
+function mre(id,html){return '<details class="rev" data-m="'+id+'"'+(UI[id]?" open":"")+'><summary>Mehr</summary>'+html+'</details>'}
+function vzr(o,key,m,l,t){return '<div class="rw"><label><input type="checkbox" data-k="'+key+'"'+(o.c[key]?" checked":"")+'><span>'+l+hs(key)+'</span></label>'+ib(t)+'<button class="ibtn" style="width:auto;border-radius:8px;padding:0 10px;margin:0" data-start="'+m+':'+key+'">Start</button></div>'+ix(t)}
+function jt(o,k,l,t,vals){var h=hd(l,t)+'<div class="sc">';(vals||["Ja","Teils","Nein"]).forEach(function(v){h+='<button data-sc="'+k+'" data-v="'+v+'" class="'+(o.n[k]==v?"on":"")+'">'+v+'</button>'});return h+'</div>'}
+
+function drawDay(){
+var o=dayo(cur),h="",ft=o.n.ft=="ja",kk=lastN("kk","");
+o.c.zl=(o.n.nd||o.n.ns)?1:0;
+var p=pd(o),st=star(o);
+h+='<div class="card"><input type="date" id="dt" value="'+cur+'"><div class="pct">'+p+'%</div><div class="bar"><i style="width:'+p+'%"></i></div><div class="h">'+(st?"Win-Tag: alle Kern-Habits erledigt":"Kern-Habits: Aufstehen, Habit-Stack, Fussballidentität, Tagesziel erreicht, "+(ft?"Target, Zählung":"Training"))+'</div></div>';
+
+h+='<div class="card"><h2>Morgen</h2>'+cb(o,"auf","Aufgestanden um 07:00")+cb(o,"hm","Kein Handy in der 1. Stunde");
+h+=vzr(o,"stk","al","Habit-Stack: Gebet, Dankbarkeit, Alltagsidentität (3-4 Min)","1. Morgengebet.\n2. Dankbarkeit: 3 Dinge in die Box.\n3. Start: Alltagsidentität. Ein Statement pro Tag in voller Formel (Vergangenheit, Emotion, Zukunft, je 1 Min), die anderen zwei einmal laut. Am Ende die Intensität 0-10.")+(o.n.vq_stk?'<div class="h">Zuletzt Intensität: '+o.n.vq_stk+'</div>':"");
+h+=hd("Dankbarkeit: 3 Dinge")+'<textarea data-n="gr" rows="3">'+(o.n.gr!==undefined?o.n.gr:"+ \n+ \n+ ")+'</textarea>';
+h+=cb(o,"tz","Tagesziel festgelegt","Wie komme ich heute meinen Identitäten näher? Eine Handlung pro Bereich.")+(kk?'<div class="h" style="margin-top:6px">Kurskorrektur von gestern: <b>'+kk+'</b></div>':"")+'<textarea data-n="tzt" rows="3">'+(o.n.tzt!==undefined?o.n.tzt:"Physique: \nLocked In: \nFussball: ")+'</textarea></div>';
+
+h+='<div class="card"><h2>Physique</h2>'+cb(o,"tr","Training erledigt",wtxt())+'<div class="row2">'+wn(o,"wb","Bench (kg)")+wn(o,"wk","Klimmzug (+kg)")+wn(o,"wc","Bizeps Curls (kg)")+wn(o,"ws","Seitheben (kg)")+'</div>'+cb(o,"slp","7h Schlaf")+cb(o,"kre","Kreatin 10 g (morgens)")+cb(o,"sko","Schwarzkümmelöl (morgens)")+cb(o,"es","20x kauen beim Essen, Squats danach","Langsam essen: 20x kauen. Danach Squats, damit die Beinmuskeln Zucker aus dem Blut aufnehmen. Das kann den Blutzucker- und Insulinanstieg nach dem Essen dämpfen.")+cb(o,"bew","Jedes Meal hatte Intention")+'</div>';
+
+h+='<div class="card"><h2>Locked In Mind</h2>'+cb(o,"dd","Keine Musik gehört","Kein Daydreaming dazu.\n\u2022 Kopfhörer weg, Spotify gelöscht.\n\u2022 Autofahren und Pendeln sind Lernzeit: Podcast, Audio, informieren, Schulstoff mit KI.\n\u2022 Kommt die Lust: 10 Liegestütze, still akzeptieren, aufschreiben, was es dir bringen würde.\n\u2022 Abdriften? Die Aufgabe in einem Satz benennen.")+cb(o,"ank","Anki täglich um 17:30","Mindestversion: 1 Deck, 5 Minuten zählen.")+cb(o,"ng","No fap")+cb(o,"sm","Instagram, TikTok, X deleted","Nur 30 Minuten maximal für Research.")+cb(o,"ai","Alltag: 1 Initiative heute","Eine davon:\n\u2022 Ein Gespräch beginnen oder als Erster sprechen.\n\u2022 Eine klare Meinung ohne Absicherung sagen.\n\u2022 Einen Raum ruhig betreten, Blickkontakt 1 Sekunde länger.")+'</div>';
+
+h+='<div class="card"><h2>Fussball</h2><div class="tg"><button data-ft="ja" class="'+(ft?"on":"")+'">Training/Spiel heute</button><button data-ft="nein" class="'+(o.n.ft=="nein"?"on":"")+'">Kein Fussball</button></div>';
+if(ft){
+h+='<h2>Vor dem Spiel</h2>';
+h+=cb(o,"fq","Pre-Game Fragen","Nicht dasselbe wie gestern: eine konkrete Situation von heute.\nWo zögere ich am ehesten (Gegner, Position, Moment)? Was tue ich dann? Grösster Fan: Was sagt er mir zu genau dieser Situation?")+'<textarea data-n="pgq" rows="3">'+(o.n.pgq!==undefined?o.n.pgq:"Hier zögere ich heute am ehesten: \nDann tue ich: \nMein grösster Fan sagt dazu: ")+'</textarea>';
+h+=cb(o,"f3","Target festgelegt (1 Zeile)","Ein Wenn-dann für heute, z.B. \u201eWenn ich den Ball mit Raum bekomme, dann Antritt und 1 gegen 1.\u201c Entschieden, bevor die Angst mitredet.")+'<textarea data-n="tg" rows="2">'+(o.n.tg!==undefined?o.n.tg:"Wenn ..., dann ...")+'</textarea>';
+h+=vzr(o,"fsc","sc","Scanning 3' (Szene 1-3)",BH);
+h+='<div class="ibx" style="display:block;margin-top:10px"><b>Im Spiel</b>\n'+RULES+'\n\n<b>Reset-Protokoll</b>\n1. Neutral benennen, was passiert ist (ohne Wertung)\n2. Ausatmen\n3. Lächeln\n4. \u201eFuck it\u201c\n5. Nächste Aktion\nKeine Gestik, nicht zeigen, was mich trifft.</div>';
+h+='<h2 style="margin-top:14px">Danach</h2><div class="h">Kaum, Teilweise, Konsequent. Gemessen wird dein Verhalten, nicht die Reaktion der anderen.</div>';
+var V3=["Kaum","Teilweise","Konsequent"];
+h+=jt(o,"r_sh","Show them: Ball verlangt, angeboten, Verantwortung übernommen","",V3)+jt(o,"r_sc","Scan: wusste ich vor dem Ball, was ich tue?","Scan-Timing, Critical Scanning, Space Scanning.",V3)+jt(o,"r_lt","Leichtigkeit: gedribbelt, geschossen, locker, nach Fehlern Fuck it","",V3);
+h+=bx(o,"mom","Mein stärkster Moment","","")+bx(o,"sr","4 positive Szenen aus dem Spiel","Konkret, mit Ort und Handlung.","+ \n+ \n+ \n+ ")+bx(o,"sk","Positive Szene im Kopf","Eine Szene, in der ich Reset-Protokoll, Biggest Fan Voice oder neutrale Bewertung gut umgesetzt habe.","+ ");
+h+=hd("Zählung","Could I have shot or was I too scared? Hätte ich können, oder hatte ich Angst? Unklar bleibt offen, kein Urteil. Ziel 4/4, wenn Raum da ist.\n\nNach dem Training 5 Abschlüsse direkt, ohne Nachdenken.\nScan-Quote: Bei 10 Annahmen zählen, wie oft du vorher geschaut hast.")+'<div class="row">'+num(o,"nd","Dribblings (Ziel 4)")+num(o,"ns","Schüsse (Ziel 4)")+num(o,"nq","Scan-Quote (von 10)")+'</div>'+bx(o,"nz","1 Satz: Was tue ich, um die 4/4 zu erreichen?","","")+cb(o,"zl","Zählung eingetragen (automatisch)",0,1);
+}
+h+='</div>';
+
+h+='<div class="card"><h2>Abend, ab 22:00</h2><div class="h">Auslöser: Geschirr abgestellt nach dem Abendessen, dann direkt hochgehen.</div><div class="h">Ausgangsabend (z.B. Samstag): die ganze Routine vorher durchziehen.</div>'+cb(o,"tp","Tag planen und alles richten (15'-Blöcke, Tasche, Kleidung)")+cb(o,"mob","Mobility-Routine","Stärken zuerst: Gluteus Medius, einbeiniges Stehen (Ankles).\nDann: 90-90 Hip, Piriformis, Knees to Wall, Neck Training und Stretch.")+'<div class="h" style="margin:8px 0">Dann Zähne putzen.</div>';
+h+=hd("Visualisierung im Stehen, Licht an",WHY)+vzr(o,"fi","fb","Fussballidentität (3-4 Min)","Ein Statement pro Tag in voller Formel: Vergangenheit, Emotion, Zukunft (mit deinen Mut- und Reset-Szenen). Die anderen zwei einmal laut. Am Ende die Intensität 0-10.")+(o.n.vq_fi?'<div class="h">Zuletzt Intensität: '+o.n.vq_fi+'</div>':"")+vzr(o,"vs","sc","Scanning (alle 7 Szenen, ca. 5 Min)","Zuerst Bounce Hit (Touch / Go), dann 7 Szenen mit Detail.");
+h+=hd("Journal")+cb(o,"tzr","Tagesziel erreicht?","Dein Tagesziel von heute Morgen:\n"+(o.n.tzt||"Noch keins notiert."))+cb(o,"jr","Journal gemacht (Boxen unten)");
+h+=bx(o,"q1","3 Szenen, in denen ich meine Identität gelebt habe","Ein Beispiel pro Bereich:\nPhysique: \u201eIch habe 20x gekaut und danach Squats gemacht, obwohl ich müde war.\u201c\nLocked In: \u201eIch habe Anki durchgezogen und keine Musik gehört.\u201c\nFussball: \u201eNach dem Ballverlust habe ich sofort die nächste Aktion verlangt.\u201c","Physique: \nLocked In: \nFussball: ")+bx(o,"qb2","Bravery","Hier hätte ich mutiger sein können, und was ich nächstes Mal tue.","Situation: \nIch hätte: \nZukunft: ")+bx(o,"zt","Habe ich meine Zeit gut genutzt?","","Gute Zeitinvestitionen: \n+ \n+ \n+ \nNegative Zeitinvestitionen: \n\u2212 \n\u2212 \n\u2212 ")+bx(o,"kk","Kurskorrektur","Eine Zeile, eine Identität, ein Wenn-dann: \u201eWenn ..., dann ich ...\u201c. Ein Fehler ist keine Aussage über dich, sondern eine Kursänderung (Maltz). Tipp: so konkret, dass du es morgen testen kannst. Die Zeile erscheint morgen im Tagesziel.","Wenn ..., dann ich ... (Identität: )");
+h+='<div style="margin-top:8px">'+cb(o,"bet","Beten")+cb(o,"bib","Bibel lesen")+'</div>';
+h+=hd("Streak übernehmen?")+'<div class="sc"><button data-st="ja" class="'+(o.n.st=="ja"?"on":"")+'">Ja, übernehmen</button><button data-st="nein" class="'+(o.n.st=="nein"?"on":"")+'">Nein</button></div></div>';
+save();return h}
+
+function hs(k){if(tab!=1)return "";var d=cur,n=0,o=S.days[d];if(!(o&&o.c&&o.c[k]))d=add(d,-1);while(n<400){var x=S.days[d];if(x&&x.c&&x.c[k]){n++;d=add(d,-1)}else break}return ' <em class="sk">'+(n>=28?28:n)+'/28</em>'}
+function ib(t){return t?'<button class="ibtn" data-i="1">i</button>':""}
+function ix(t){return t?'<div class="ibx" hidden>'+t+'</div>':""}
+function hd(l,t,c){return '<h2 class="'+(c||"sub")+'">'+l+ib(t)+'</h2>'+ix(t)}
+function cb(o,k,l,t,dis){return '<div class="rw"><label><input type="checkbox" data-k="'+k+'"'+(dis?" disabled":"")+(o.c[k]?" checked":"")+'><span>'+l+hs(k)+'</span></label>'+ib(t)+'</div>'+ix(t)}
+function bx(o,k,l,t,tpl){return hd(l,t)+'<textarea data-n="'+k+'" rows="'+tpl.split("\n").length+'">'+(o.n[k]!==undefined?o.n[k]:tpl)+'</textarea>'}
+
+function num(o,k,l,st){return '<div><small>'+l+'</small><input type="number" step="'+(st||1)+'" data-n="'+k+'" value="'+(o.n[k]||"")+'"></div>'}
+function cp(o,ks){var n=0;ks.forEach(function(x){if(o.c&&o.c[x])n++});return Math.round(100*n/ks.length)}
+function keys(o){var k=MG.concat(PH,MD,AB);if(o.n&&o.n.ft=="ja")k=k.concat(FB);return k}
+function pd(o){o.c=o.c||{};return cp(o,keys(o))}
+function star(o){var k=["auf","stk","tzr","fi"];k=(o.n&&o.n.ft=="ja")?k.concat(["f3","zl"]):k.concat(["tr"]);return k.every(function(x){return o.c&&o.c[x]})}
+var tab=1,cur=iso(new Date()),wk=mon(cur);
+
+function drawWeek(){
+var o=weeko(wk),h="",bars="",wn=0,ls=0,dots="",pr={},pl=0,pc={ph:[],md:[],fb:[]},fs=0,qs=0,qn=0;
+PH.forEach(function(k){pr[k]=0});
+for(var i=0;i<7;i++){var d=add(wk,i),x=S.days[d],p=0;
+if(x){x.c=x.c||{};x.n=x.n||{};p=pd(x);pl++;if(star(x)){wn++;dots+='<i class="w"></i>'}else{ls++;dots+='<i class="l"></i>'}
+pc.ph.push(cp(x,PH));pc.md.push(cp(x,MD));if(x.n.ft=="ja")pc.fb.push(cp(x,FB));if(x.c.fs)fs++;if(x.n.nq){qs+=+x.n.nq;qn++}PH.forEach(function(k){if(x.c[k])pr[k]++})}else dots+='<i></i>';
+bars+='<div><i style="height:'+Math.max(p,2)+'%"></i><b>'+p+'%</b><em>'+["Mo","Di","Mi","Do","Fr","Sa","So"][i]+'</em></div>'}
+function av(a){return a.length?Math.round(a.reduce(function(s,v){return s+v},0)/a.length):0}
+function top(a){var v=av(a);return '<div class="pct">'+v+'%</div><div class="bar"><i style="width:'+v+'%"></i></div><div class="h">Schnitt der Tages-Habits</div>'}
+function tri(p,m){return bx(o,p+"_fm",m,"","\u2212 ")+bx(o,p+"_ff","Fokus nächste Woche","","+ ")+bx(o,p+"_s3","3 Dinge, die gut liefen","","+ \n+ \n+ ")}
+var wnr=wnum(wk);
+h+='<div class="card"><input type="date" id="dw" value="'+wk+'"><div class="h">Woche '+wnr+' ab Montag '+wk+'</div><h2 class="sub">Wochenverlauf (Win = alle Kern-Habits)</h2><div class="chart">'+bars+'</div><div class="series">'+dots+'<b>'+wn+'-'+ls+'</b></div></div>';
+var am={};Object.keys(S.days).forEach(function(d){am[mon(d)]=1});Object.keys(S.weeks).forEach(function(w){am[w]=1});
+var hi="";Object.keys(am).sort().reverse().forEach(function(w){if(w!=wk)hi+='<button data-gowk="'+w+'">Woche '+wnum(w)+' ab '+w+'</button>'});
+h+='<div class="card"><details class="rev"><summary>Historie</summary><div class="hist">'+(hi||'<div class="h">Noch keine weiteren Wochen</div>')+'</div></details></div><details class="rev" open><summary>Wochenreview ausfüllen</summary>';
+h+='<div class="card"><h3>Physique</h3>'+top(pc.ph);
+var b=null,w=null;PH.forEach(function(k){if(b===null||pr[k]>pr[b])b=k;if(w===null||pr[k]<pr[w])w=k});
+if(pl)h+='<div class="bw"><span class="g">Bestes: '+PL[b]+' ('+pr[b]+'/'+pl+')</span><span class="r">Schwächstes: '+PL[w]+' ('+pr[w]+'/'+pl+')</span></div>';
+h+='<div class="row" style="margin-top:10px">'+num(o,"bp","Bench Top-Set (kg)",.5)+num(o,"kz","Klimmzug (+kg)",.5)+num(o,"kg","Gewicht (kg)",.1)+'</div>';
+[["bild","Bild aufgenommen"],["ov","Progressive Overload in jeder Einheit"],["g3","3x Gym (mind.)"],["z2","2x Zusatztraining (1x Schwächen, 1x Stärken)","Die 4 I: Interesting (worauf achte ich?), Intense (wie fokussiert?), Internalised (was wiederhole ich bis es automatisch ist?), Integrated (wie zeigt es sich im Spiel?)"],["lt","1x Lauftraining: Intervall oder Hill Sprints"],["kb","Basics-Einheit 15 Min (erster Touch, schwacher Fuss), auch wenn müde","Kobe: Basics ohne Ausreden."]].forEach(function(a){h+=cb(o,a[0],a[1],a[2])});
+h+=tri("phys","Muster im Mismatch")+'</div>';
+h+='<div class="card"><h3>Locked In Mind</h3>'+top(pc.md)+bx(o,"m_sch","Schule/Arbeit: wie zufrieden bin ich?","","Zufriedenheit (1-10): \nWarum: ")+bx(o,"m_std","Standortbestimmung","","Bin ich gleich weit wie die besten 10%? \nWas verbessere ich im Vergleich zur Vergangenheit? ")+bx(o,"m_wrk","Arbeit bewerten","","Bewertung (1-10): \nZeit sparen: \nBesser rüberkommen: \nNetworking (1-10): ")+tri("mind","Muster im Mismatch")+'</div>';
+h+='<div class="card"><h3>Fussball</h3>'+top(pc.fb)+'<div class="h">Scan-Quote Ø <b>'+(qn?(qs/qn).toFixed(1):'–')+'/10</b></div>'+cb(o,"vc","Video-Check (20 Ballannahmen: Schulterblick? Antritt?)","Ab Woche 1, damit du eine Baseline hast. Zähle: Wie oft Schulterblick vor der Annahme, wie oft Antritt direkt danach.")+bx(o,"zr","Zurückhaltungs-Review","Wo wollte ich mutig sein und habe gezögert? Wovor hatte ich Angst? Was habe ich vermieden? Wie entscheide ich mich beim nächsten Mal?","Gezögert bei: \nAngst vor: \nNächstes Mal: ")+bx(o,"sp3","Meine 3 Spielprinzipien (einmal schreiben)","Was Spielen für dich heisst, z.B. \u201eIch nehme jeden Ball mit Antritt an.\u201c Abends prüfst du Ja/Nein, ob du danach gehandelt hast (Rohn).","1. \n2. \n3. ")+tri("fb","Mismatch-Muster")+'</div>';
+var PQ=["Was ist mein Spielprinzip? Wo habe ich danach gehandelt, wo nicht?","Was würde der Spieler tun, der ich werden will?","Welche Prinzipien leiten mich, wenn andere zuschauen?","Wo hat Angst statt meiner Prinzipien entschieden?"];
+h+='<div class="card"><h3>Wochen-Rituale</h3>'+cb(o,"rk","Risiko-Aktion der Woche gemacht","Montag festlegen, Sonntag abhaken. Von keinem Fehler abbringen lassen.")+bx(o,"rkt","Risiko-Aktion","","Geplant: \nWas passiert ist: ")+bx(o,"phil","Philosophie-Notiz (Rohn)","Eine Leitfrage pro Woche, 3-5 Sätze, damit deine Prinzipien nicht nur im Kopf bleiben.",PQ[Math.max(0,wnr-1)%4]+"\n")+bx(o,"tf","Trainer-Feedback sachlich","Was genau wurde gesagt, welche Handlung folgt daraus?","Gesagt: \nDaraus folgt: ")+bx(o,"tw","Top-3-Wins der Woche","Beweisliste. Diese Woche notiert:\n"+lw(),"+ \n+ \n+ ");
+if(wnr>=5)h+=bx(o,"gap","Gap-Check (1x pro Woche)","Wie sieht ein Spieler auf dem nächsten Level auf meiner Position aus (Technik, Taktik, Physis, Psyche, Sozial)?","Nächstes Level: \nGrösster Abstand: \nEINE Gewohnheit: ");else h+='<div class="h">Gap-Check startet in Woche 5.</div>';
+if(wnr==4||wnr==8||wnr==12)h+=bx(o,"fort","Fortschritt (Woche "+wnr+")","","Bewerte ich mich im Spiel seltener als Person? \nBin ich nach Fehlern schneller zurück? \nNutze ich Chancen häufiger? \nKann ich Stärken und Lernpunkte sachlich benennen? ");
+h+='</div></details>';save();return h}
+
+function draw(){renderStk();document.getElementById("ws").textContent="Woche "+cw()+" von 12 · noch "+Math.max(0,84-dsince())+" Tage bis Ende";
+document.getElementById("t1").className=tab==1?"on":"";document.getElementById("t2").className=tab==2?"on":"";
+document.getElementById("v").innerHTML=tab==1?drawDay():drawWeek()}
+var V=document.getElementById("v");
+document.getElementById("t1").onclick=function(){tab=1;draw()};
+document.getElementById("t2").onclick=function(){tab=2;draw()};
+V.addEventListener("change",function(e){var t=e.target;
+if(t.id=="dt"){cur=t.value||cur;draw();return}if(t.id=="dw"){wk=mon(t.value||wk);draw();return}
+var o=tab==1?dayo(cur):weeko(wk),y=window.scrollY;
+if(t.dataset.k&&!t.disabled){o.c[t.dataset.k]=t.checked?1:0;save();draw();window.scrollTo(0,y)}
+if(t.dataset.n){o.n[t.dataset.n]=t.value;save();if(tab==1){draw();window.scrollTo(0,y)}}});
+V.addEventListener("click",function(e){var t=e.target,y=window.scrollY;
+var sb=t.closest("button[data-start]");if(sb){var pp=sb.dataset.start.split(":");startViz(pp[0],pp[1]);return}
+var b=t.closest(".ibtn");if(b){var x=b.parentNode.nextElementSibling;if(x)x.hidden=!x.hidden;return}
+b=t.closest("button[data-st]");if(b){dayo(cur).n.st=b.dataset.st;save();draw();return}
+b=t.closest("button[data-ft]");if(b){dayo(cur).n.ft=b.dataset.ft;save();draw();return}
+b=t.closest("button[data-gowk]");if(b){wk=b.dataset.gowk;draw();return}
+b=t.closest("button[data-sc]");if(b){dayo(cur).n[b.dataset.sc]=b.dataset.v;save();draw();window.scrollTo(0,y)}});
+V.addEventListener("toggle",function(e){var d=e.target;if(d.dataset&&d.dataset.m)UI[d.dataset.m]=d.open},true);
+document.getElementById("ov").addEventListener("click",function(e){var b=e.target.closest("button");if(!b||!VZ)return;
+if(b.dataset.vz=="x"){VZ=null;clearInterval(VT);showViz();return}
+if(b.dataset.vz=="n"){VZ.i++;var st=VZ.steps[VZ.i];VZ.left=st?st.s:0;showViz();return}
+if(b.dataset.vq)endViz(b.dataset.vq)});
+draw();
+</script></body></html>
